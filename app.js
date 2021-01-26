@@ -5,14 +5,14 @@ const app = express();
 
 
 app.use('/', (req, res, next) => {
-    console.log('This always runs!');
+    console.log('First Middleware');
     next();
 });
 
 
 app.use('/products',(req, res, next) => {
-    console.log("in another middleware !!");
-    res.send("<h1>Youve reached the HOME Page DUDE!!</h1>")
+    console.log("Second Middleware !!");
+    res.send("<h1>Youve reached the HOME Page DUDE!!</h1>");
 });
 
 app.use('/', (req, res, next) => {
